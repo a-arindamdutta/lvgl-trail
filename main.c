@@ -269,6 +269,10 @@ void load_tabs(void)
 
     label = lv_label_create(tab2, NULL);
     lv_label_set_text(label, "Second tab");
+    lv_obj_t * btn2 = lv_btn_create(tab2, NULL);
+    label = lv_label_create(btn2, NULL);
+    lv_obj_align(btn2, NULL, LV_ALIGN_IN_BOTTOM_MID, 0, -20);
+    lv_label_set_text(label, LV_SYMBOL_PREV " piche jao");
 
     label = lv_label_create(tab3, NULL);
     lv_label_set_text(label, "Third tab");
