@@ -254,9 +254,7 @@ void load_tabs(void)
                       "of a tab\n"
                       "become too long\n"
                       "the it \n"
-                      "automatically\n"
-                      "become\n"
-                      "scrollable.");
+                      "au");
 
 
 
