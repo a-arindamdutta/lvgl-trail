@@ -180,7 +180,8 @@ void init_styles(void)
 
 static void event_handler(lv_obj_t * obj, lv_event_t event)
 {
-    if(event == LV_EVENT_CLICKED) {
+    if(event == LV_EVENT_CLICKED)
+    {
         printf("Clicked\n");
         load_tabs();
         lv_scr_load_anim(tabs_screen, LV_SCR_LOAD_ANIM_OVER_RIGHT, 300, 100, false);
@@ -189,7 +190,8 @@ static void event_handler(lv_obj_t * obj, lv_event_t event)
 
 static void event_handler_2(lv_obj_t * obj, lv_event_t event)
 {
-    if(event == LV_EVENT_CLICKED) {
+    if(event == LV_EVENT_CLICKED)
+    {
         printf("Clicked\n");
         load_tabs();
         lv_scr_load_anim(boot_screen, LV_SCR_LOAD_ANIM_OVER_LEFT, 300, 100, false);
@@ -231,7 +233,8 @@ void load_boot_screen(void)
 
 }
 
-void load_tabs(void){
+void load_tabs(void)
+{
 
     tabs_screen = lv_obj_create(NULL, NULL);
 
@@ -247,13 +250,13 @@ void load_tabs(void){
     /*Add content to the tabs*/
     lv_obj_t * label = lv_label_create(tab1, NULL);
     lv_label_set_text(label, "This the first tab\n\n"
-                             "If the content\n"
-                             "of a tab\n"
-                             "become too long\n"
-                             "the it \n"
-                             "automatically\n"
-                             "become\n"
-                             "scrollable.");
+                      "If the content\n"
+                      "of a tab\n"
+                      "become too long\n"
+                      "the it \n"
+                      "automatically\n"
+                      "become\n"
+                      "scrollable.");
 
 
 
@@ -266,6 +269,13 @@ void load_tabs(void){
 
     label = lv_label_create(tab2, NULL);
     lv_label_set_text(label, "Second tab");
+
+    lv_obj_t * btn2 = lv_btn_create(tab2, NULL);
+    lv_obj_align(btn2, NULL, LV_ALIGN_IN_BOTTOM_MID, 0, -40);
+
+    label = lv_label_create(btn2, NULL);
+    lv_label_set_text(label, LV_SYMBOL_PREV " WTF");
+
 
     label = lv_label_create(tab3, NULL);
     lv_label_set_text(label, "Third tab");
