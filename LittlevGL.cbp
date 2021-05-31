@@ -38,6 +38,12 @@
 			<Add option="-Wall" />
 			<Add directory="." />
 		</Compiler>
+		<Unit filename="bootlogo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bootlogo2.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="lv_conf.h" />
 		<Unit filename="lv_drivers/display/ILI9341.c">
 			<Option compilerVar="CC" />
